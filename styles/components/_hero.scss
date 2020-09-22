@@ -14,18 +14,25 @@
 
     .image-wrapper {
       height: 0;
-      overflow: hidden;
       padding-top: calc(100% * (304 / 490));
       position: relative;
       object-position: center;
       object-fit: cover;
+
+      &::after {
+        content: url("../../images/dotted-frame.svg");
+        @include full-span;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        z-index: -1;
+      }
   
       img {
+        @include full-span;
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
       }
     }
   }

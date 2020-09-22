@@ -241,7 +241,6 @@ header {
 
 .hero .layout-wrapper .hero-image .image-wrapper {
   height: 0;
-  overflow: hidden;
   padding-top: calc(100% * (304 / 490));
   position: relative;
   -o-object-position: center;
@@ -250,11 +249,21 @@ header {
      object-fit: cover;
 }
 
+.hero .layout-wrapper .hero-image .image-wrapper::after {
+  content: url("../../images/dotted-frame.svg");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: -1;
+}
+
 .hero .layout-wrapper .hero-image .image-wrapper img {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
