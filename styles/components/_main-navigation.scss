@@ -7,7 +7,7 @@ header {
 }
 
 .main-nav {
-  z-index: 2;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,6 +51,11 @@ header {
       margin-right: 1rem;
       text-decoration: none;
       color: inherit;
+
+      &.btn.donate {
+        display: inline-block;
+        color: white;
+      }
 
       &:last-of-type {
         margin-right: 0;

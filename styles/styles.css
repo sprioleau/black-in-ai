@@ -76,7 +76,7 @@ button,
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0;
+  margin-top: 0;
   color: #1f2421;
   font-weight: unset;
 }
@@ -85,12 +85,19 @@ h1, h2 {
   font-family: "Lora", Avenir, Helvecitca Neue, sans-serif;
 }
 
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
 p {
   line-height: 1.8;
   font-size: 1.2rem;
   color: #666;
   font-weight: 300;
   max-width: 60ch;
+  margin-top: 0;
 }
 
 body {
@@ -106,6 +113,10 @@ body {
   background-color: #007299;
 }
 
+.section.bg-blue h2 {
+  color: #fff;
+}
+
 .section.bg-blue p {
   color: #c5ebf9;
 }
@@ -119,22 +130,47 @@ main {
   margin-top: 120px;
 }
 
+a {
+  color: inherit;
+}
+
 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
   font-weight: 600;
   border-radius: 3rem;
   color: #1f2421;
   background-color: #fff;
   text-decoration: none;
-  padding: 0.6rem 1.5rem 0.5rem;
+  padding: 1rem 1.75rem 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   line-height: 1;
+  border: none;
 }
 
 .btn.donate {
   color: #fff;
   background-color: #f18f01;
+}
+
+.btn.dark {
+  color: #fff;
+  background-color: #1f2421;
+}
+
+.btn.ghost {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
 }
 
 header {
@@ -146,7 +182,7 @@ header {
 }
 
 .main-nav {
-  z-index: 2;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,6 +243,11 @@ header {
   color: inherit;
 }
 
+.main-nav .nav-links .nav-link.btn.donate {
+  display: inline-block;
+  color: white;
+}
+
 .main-nav .nav-links .nav-link:last-of-type {
   margin-right: 0;
 }
@@ -226,10 +267,9 @@ header {
 
 .hero .layout-wrapper .hero-text {
   font-size: 2rem;
-  margin-right: 1.5rem;
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
+  margin-right: 2rem;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 .hero .layout-wrapper .hero-image {
@@ -265,5 +305,56 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.conferences-workshops .layout-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.conferences-workshops .layout-wrapper > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.conferences-workshops .conferences-workshops__description {
+  padding-right: 2rem;
+}
+
+.conferences-workshops .conferences-workshops__events {
+  width: 100%;
+}
+
+.conferences-workshops .conferences-workshops__events .event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.conferences-workshops .conferences-workshops__events .event .event__title {
+  color: #fff;
+  margin: 0;
+}
+
+.conferences-workshops .conferences-workshops__events .view-more {
+  text-decoration: none;
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 1.5rem 0;
+}
+
+.conferences-workshops .conferences-workshops__events .view-more:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=styles.css.map */

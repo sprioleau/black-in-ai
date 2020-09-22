@@ -1,17 +1,29 @@
 .btn {
-  // @include center;
+  @include center;
   @include ff-medium;
   border-radius: 3rem;
   color: $black;
   background-color: $white;
   text-decoration: none;
-  padding: 0.6rem 1.5rem 0.5rem;
+  padding: 1rem 1.75rem 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   line-height: 1;
+  border: none;
   
   &.donate {
     color: $white;
     background-color: $orange;
+  }
+
+  &.dark {
+    color: $white;
+    background-color: $black;
+  }
+
+  &.ghost {
+    color: $white;
+    border: 1px solid $white;
+    background-color: transparent;
   }
 }

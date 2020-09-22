@@ -1,0 +1,42 @@
+.conferences-workshops {
+  .layout-wrapper {
+    display: flex;
+
+    & > * {
+      flex: 1 1 50%;
+    }
+  }
+
+  .conferences-workshops__description {
+    padding-right: $gap-padding;
+  }
+
+  .conferences-workshops__events {
+    width: 100%;
+
+    .event {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba($white, 0.25);
+      
+      .event__title {
+        color: $white;
+        margin: 0;
+      }
+    }
+    
+    .view-more {
+      text-decoration: none;
+      display: block;
+      border-top: 1px solid rgba($white, 0.25);
+      padding: 1.5rem 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

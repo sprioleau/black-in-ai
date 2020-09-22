@@ -4,8 +4,8 @@
 
   .hero-text {
     font-size: 2rem;
-    margin-right: 1.5rem;
-    flex: 50%;
+    margin-right: $gap-padding;
+    flex-basis: 50%;
   }
 
   .hero-image {

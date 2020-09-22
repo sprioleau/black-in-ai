@@ -1,6 +1,7 @@
 // Variables
 $container-width: 1400px; 
 $header-height: 120px;
+$gap-padding: 2rem;
 
 body {
   background: $white;
@@ -13,6 +14,10 @@ body {
   &.bg-blue {
     background-color: $blue;
     
+    h2 {
+      color: $white;
+    }
+
     p {
       color: $blue-light;
     }
@@ -26,4 +31,8 @@ body {
 
 main {
   margin-top: $header-height;
+}
+
+a {
+  color: inherit;
 }
