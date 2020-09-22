@@ -3,18 +3,22 @@ header {
   top: 0;
   margin: 0 auto;
   width: 100%;
-  height: $header-height;
+  background-color: $white;
+
+  .container {
+    height: $header-height;
+  }
 }
 
 .main-nav {
-  z-index: 5;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: $white;
+  justify-content: space-between;
+  z-index: 2;
   margin: 0 auto;
   max-width: $container-width;
+  height: 100%;
+  // padding: 1rem;
 
   .logo {
     display: flex;

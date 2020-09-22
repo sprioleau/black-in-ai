@@ -87,7 +87,6 @@ h1, h2 {
 
 h2 {
   font-size: 3rem;
-  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -115,6 +114,7 @@ body {
 
 .section.bg-blue h2 {
   color: #fff;
+  text-align: center;
 }
 
 .section.bg-blue p {
@@ -127,7 +127,7 @@ body {
 }
 
 main {
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 a {
@@ -178,24 +178,27 @@ header {
   top: 0;
   margin: 0 auto;
   width: 100%;
-  height: 120px;
+  background-color: #fff;
+}
+
+header .container {
+  height: 100px;
 }
 
 .main-nav {
-  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: #fff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 2;
   margin: 0 auto;
   max-width: 1400px;
+  height: 100%;
 }
 
 .main-nav .logo {
@@ -281,12 +284,8 @@ header {
 
 .hero .layout-wrapper .hero-image .image-wrapper {
   height: 0;
-  padding-top: calc(100% * (304 / 490));
+  padding-top: calc(100% * 0.62041);
   position: relative;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .hero .layout-wrapper .hero-image .image-wrapper::after {
@@ -297,6 +296,17 @@ header {
   top: 1.5rem;
   left: 1.5rem;
   z-index: -1;
+}
+
+.hero .layout-wrapper .hero-image .image-wrapper .image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../images/hero-image.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .hero .layout-wrapper .hero-image .image-wrapper img {

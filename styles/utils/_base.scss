@@ -1,6 +1,6 @@
 // Variables
 $container-width: 1400px; 
-$header-height: 120px;
+$header-height: 100px;
 $gap-padding: 2rem;
 
 body {
@@ -16,6 +16,7 @@ body {
     
     h2 {
       color: $white;
+      text-align: center;
     }
 
     p {
