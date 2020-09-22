@@ -9,11 +9,24 @@
   }
 
   .hero-image {
-    background-image: url(../../images/hero-image.png);
-    width: 100%;
-    max-width: 490px;
-    padding-top: calc(100% * (304 / 490));
-    background-position: center;
-    background-size: cover;
+    flex: 50%;
+    max-width: 550px;
+
+    .image-wrapper {
+      height: 0;
+      overflow: hidden;
+      padding-top: calc(100% * (304 / 490));
+      position: relative;
+      object-position: center;
+      object-fit: cover;
+  
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
