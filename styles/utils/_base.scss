@@ -1,8 +1,21 @@
+// Variables
+$container-width: 1400px; 
+$header-height: 120px;
+
+body {
+  background: $white;
+  font-family: $ff;
+}
+
 .section {
   padding: 80px;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: $container-width;
   margin: 0 auto;
+}
+
+main {
+  margin-top: $header-height;
 }

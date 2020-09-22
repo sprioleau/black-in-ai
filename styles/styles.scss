@@ -1,10 +1,13 @@
 // Utilities
 @import "utils/normalize";
-@import "utils/varables";
+@import "utils/variables";
 @import "utils/mixins";
 @import "utils/typography";
 @import "utils/base";
 @import "utils/svg";
 
 // Components
-// Components here
+@import "components/button";
+@import "components/main-navigation";
+@import "components/info-card";
+@import "components/footer";
