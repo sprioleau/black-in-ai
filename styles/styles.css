@@ -97,6 +97,7 @@ p {
   font-weight: 300;
   max-width: 60ch;
   margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 body {
@@ -132,6 +133,7 @@ main {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 .btn {
@@ -146,6 +148,8 @@ a {
           justify-content: center;
   font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
   font-weight: 600;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 3rem;
   color: #1f2421;
   background-color: #fff;
@@ -157,9 +161,29 @@ a {
   border: none;
 }
 
+.btn:focus {
+  outline: transparent;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #1f2421;
+  -webkit-transform: translateY(-5px) scale(1.02);
+          transform: translateY(-5px) scale(1.02);
+}
+
+.btn:active {
+  -webkit-transform: translateY(0) scale(0.98);
+          transform: translateY(0) scale(0.98);
+}
+
 .btn.donate {
   color: #fff;
   background-color: #f18f01;
+}
+
+.btn.donate:hover {
+  background-color: #be7101;
 }
 
 .btn.dark {
@@ -167,10 +191,20 @@ a {
   background-color: #1f2421;
 }
 
+.btn.dark:hover {
+  color: #1f2421;
+  background-color: #fff;
+}
+
 .btn.ghost {
   color: #fff;
   border: 1px solid #fff;
   background-color: transparent;
+}
+
+.btn.ghost:hover {
+  color: #1f2421;
+  background-color: #fff;
 }
 
 header {
@@ -270,6 +304,7 @@ header .container {
 
 .hero .layout-wrapper .hero-text {
   font-size: 2rem;
+  font-size: clamp(1rem, 2vw, 2rem);
   margin-right: 2rem;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
@@ -352,6 +387,10 @@ header .container {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+.conferences-workshops .conferences-workshops__events .event:first-of-type {
+  margin-top: 0.75rem;
+}
+
 .conferences-workshops .conferences-workshops__events .event .event__title {
   color: #fff;
   margin: 0;
@@ -364,7 +403,13 @@ header .container {
   padding: 1.5rem 0;
 }
 
-.conferences-workshops .conferences-workshops__events .view-more:hover {
-  text-decoration: underline;
+.conferences-workshops .conferences-workshops__events .view-more p {
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin: 0;
+}
+
+.conferences-workshops .conferences-workshops__events .view-more:hover p {
+  color: #fff;
 }
 /*# sourceMappingURL=styles.css.map */

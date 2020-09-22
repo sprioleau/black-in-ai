@@ -1,6 +1,7 @@
 .btn {
   @include center;
   @include ff-medium;
+  @include transition;
   border-radius: 3rem;
   color: $black;
   background-color: $white;
@@ -10,20 +11,48 @@
   letter-spacing: 0.5px;
   line-height: 1;
   border: none;
+
+  &:focus {
+    outline: transparent;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $black;
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
   
   &.donate {
     color: $white;
     background-color: $orange;
+
+    &:hover {
+      background-color: darken($orange, 10%);
+    }
   }
 
   &.dark {
     color: $white;
     background-color: $black;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
   }
 
   &.ghost {
     color: $white;
     border: 1px solid $white;
     background-color: transparent;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
   }
 }

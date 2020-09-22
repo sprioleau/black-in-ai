@@ -6,6 +6,7 @@ $hero-image-ratio: 304 / 490;
 
   .hero-text {
     font-size: 2rem;
+    font-size: clamp(1rem, 2vw, 2rem);
     margin-right: $gap-padding;
     flex-basis: 50%;
   }
