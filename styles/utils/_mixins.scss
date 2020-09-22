@@ -1,0 +1,50 @@
+// Breakpoints
+$bp-x-small: 350px;
+$bp-small: 576px;
+$bp-x-medium: 850px;
+$bp-x-large: 1180px;
+
+
+@mixin xsm {
+  @media (max-width: #{$bp-x-small}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$bp-small}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$bp-medium}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$bp-large}) {
+    @content;
+  }
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin full-span {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin transition {
+  transition: all 0.3s ease-out;
+}
