@@ -9,6 +9,14 @@ body {
 
 .section {
   padding: 80px;
+
+  &.bg-blue {
+    background-color: $blue;
+    
+    p {
+      color: $blue-light;
+    }
+  }
 }
 
 .container {

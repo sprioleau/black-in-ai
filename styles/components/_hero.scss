@@ -1,0 +1,19 @@
+.hero .layout-wrapper {
+  display: flex;
+  align-items: center;
+
+  .hero-text {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    flex: 50%;
+  }
+
+  .hero-image {
+    background-image: url(../../images/hero-image.png);
+    width: 100%;
+    max-width: 490px;
+    padding-top: calc(100% * (304 / 490));
+    background-position: center;
+    background-size: cover;
+  }
+}
