@@ -1,0 +1,110 @@
+$footer-bottom-margin: 1.75rem;
+
+.footer {
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: calc(2 * #{$gap-padding});
+
+    .footer-column {
+      &__heading {
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: $footer-bottom-margin;
+
+        &.logo-wordmark {
+          @include ff-medium;
+          font-size: 1.5rem;
+          margin-bottom: $footer-bottom-margin;
+        }
+      }
+
+      p, a, li {
+        font-size: 1.2rem;
+      }
+
+      ul, li {
+        list-style: none;
+        margin: 0 0 2rem;
+        padding: 0;
+      }
+
+      .email {
+        margin-bottom: $footer-bottom-margin;
+      }
+
+      .social-wrapper {
+        display: flex;
+
+        .social-link {
+          @include square-span(2rem);
+          @include transition;
+          opacity: 1;
+          
+          &:first-of-type {
+            margin-right: 1.5rem;
+          }
+
+          &.facebook:hover svg path {
+            fill: $facebook-blue;
+          }
+
+          &.twitter:hover svg path {
+            fill: $twitter-blue;
+          }
+
+          .icon {
+  
+            svg {
+              @include full-span;
+            }
+          }
+        }
+      }
+
+      .form {
+        width: 100%;
+        display: block;
+        display: flex;
+        align-items: center;
+
+        .input-wrapper {
+          position: relative;
+          background-color: $white;
+          border-radius: 3rem;
+          padding: 1rem 1.5rem;
+          padding-right: 160px;
+          width: 100%;
+          
+          .form__input {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            
+            &:focus {
+              outline: transparent;
+            }
+          }
+          
+          .form__button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            height: 50px;
+          }
+        }
+
+      }
+    }
+
+    .copyright {
+      color: $white;
+      opacity: 0.8;
+      font-size: 1.2rem;
+    }
+  }
+}

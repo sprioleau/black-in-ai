@@ -23,6 +23,24 @@ body {
       color: $blue-light;
     }
   }
+
+  &.bg-black {
+    background-color: $black;
+    
+    h2, h3, p, a {
+      color: $white;
+    }
+
+    p, a {
+      opacity: 0.8;
+    }
+
+    // p {  
+    //   -webkit-font-smoothing: antialiased;
+    //   -moz-osx-font-smoothing: grayscale;
+    // }
+  }
+
 }
 
 .container {
