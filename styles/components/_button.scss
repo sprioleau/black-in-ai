@@ -1,59 +1,60 @@
 .btn {
-  @include center;
-  @include ff-medium;
-  @include transition;
-  border-radius: 3rem;
-  color: $black;
-  background-color: $white;
-  text-decoration: none;
-  padding: 1rem 1.75rem 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  border: none;
+	@include center;
+	@include ff-medium;
+	@include transition;
+	font-size: 0.9rem;
+	border-radius: 3rem;
+	color: $black;
+	background-color: $white;
+	text-decoration: none;
+	padding: 1rem 1.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	line-height: 1;
+	border: none;
 
-  &:focus {
-    outline: transparent;
-  }
+	&:focus {
+		outline: transparent;
+	}
 
-  &:hover {
-    color: $white;
-    background-color: $black;
-    transform: translateY(-5px) scale(1.02);
-  }
+	&:hover {
+		color: $white;
+		background-color: $black;
+		transform: translateY(-5px) scale(1.02);
+	}
 
-  &:active {
-    transform: translateY(0) scale(0.98);
-  }
-  
-  &.donate {
-    color: $white;
-    background-color: $orange;
-    font-size: 0.9;
+	&:active {
+		transform: translateY(0) scale(0.98);
+	}
 
-    &:hover {
-      background-color: darken($orange, 10%);
-    }
-  }
+	&.donate {
+		color: $white;
+		background-color: $orange;
+		font-size: 0.9;
 
-  &.dark {
-    color: $white;
-    background-color: $black;
+		&:hover {
+			background-color: darken($orange, 10%);
+		}
+	}
 
-    &:hover {
-      color: $black;
-      background-color: $white;
-    }
-  }
+	&.dark {
+		color: $white;
+		background-color: $black;
 
-  &.ghost {
-    color: $white;
-    border: 1px solid $white;
-    background-color: transparent;
+		&:hover {
+			color: $black;
+			background-color: $white;
+		}
+	}
 
-    &:hover {
-      color: $black;
-      background-color: $white;
-    }
-  }
+	&.ghost {
+		color: $white;
+		border: 1px solid $white;
+		background-color: transparent;
+
+		&:hover {
+			color: $black;
+			background-color: $white;
+		}
+	}
 }

@@ -1,48 +1,74 @@
 $hero-image-ratio: 304 / 490;
 
 .hero .layout-wrapper {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 
-  .hero-text {
-    margin-right: $gap-padding;
-    flex-basis: 50%;
-  }
+	.hero-text {
+		margin-right: calc(1.5 * #{$gap-padding});
+		flex-basis: 50%;
 
-  .hero-image {
-    flex: 50%;
-    max-width: 550px;
+		p {
+			margin: 0;
+		}
+	}
 
-    .image-wrapper {
-      height: 0;
-      padding-top: calc(100% * #{$hero-image-ratio});
-      position: relative;
+	.hero-image {
+		flex-basis: 50%;
+		max-width: 550px;
 
-      &::after {
-        content: url("../../images/dotted-frame.svg");
-        @include full-span;
-        position: absolute;
-        top: 1.5rem;
-        left: 1.5rem;
-        z-index: -1;
-      }
+		.image-wrapper {
+			height: 0;
+			padding-top: calc(100% * #{$hero-image-ratio});
+			position: relative;
 
-      .image {
-        @include full-span;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url("../../images/hero-image.png");
-        background-position: center;
-        background-size: cover;
-      }
-  
-      img {
-        @include full-span;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-  }
+			&::after {
+				content: url("../../images/dotted-frame.svg");
+				@include full-span;
+				position: absolute;
+				top: 1.5rem;
+				left: 1.5rem;
+				z-index: -1;
+			}
+
+			.image {
+				@include full-span;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: url("../../images/hero-image.png");
+				background-position: center;
+				background-size: cover;
+			}
+
+			img {
+				@include full-span;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+}
+
+@include md {
+	.hero .layout-wrapper {
+		display: block;
+
+		.hero-text {
+			text-align: center;
+			margin-right: 0;
+			margin-bottom: 1.5rem;
+		}
+
+		.hero-image {
+			max-width: 100%;
+
+			.image-wrapper {
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
 }

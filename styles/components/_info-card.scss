@@ -1,0 +1,72 @@
+$info-card-image-ratio: 1;
+
+.info-card {
+	display: flex;
+	flex-direction: column;
+
+	.image-wrapper {
+		height: 0;
+		padding-top: calc(100% * #{$info-card-image-ratio});
+		position: relative;
+		margin-bottom: 1.5rem;
+
+		.info-card-image {
+			@include full-span;
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-position: center;
+			object-fit: cover;
+		}
+	}
+}
+
+@include md {
+	.info-card {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "image text";
+		grid-gap: $gap-padding;
+
+		&:nth-of-type(even) {
+			grid-template-areas: "text image";
+		}
+
+		.image-wrapper {
+			grid-area: image;
+			width: 100%;
+			margin-bottom: 0;
+		}
+
+		.description {
+			grid-area: text;
+		}
+	}
+}
+
+@include sm {
+	.info-card {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"image"
+			"text";
+		grid-gap: $gap-padding;
+
+		&:nth-of-type(even) {
+			grid-template-areas:
+				"image"
+				"text";
+		}
+
+		.image-wrapper {
+			grid-area: image;
+			width: 100%;
+			margin-bottom: 0;
+		}
+
+		.description {
+			grid-area: text;
+		}
+	}
+}

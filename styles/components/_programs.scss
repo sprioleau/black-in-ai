@@ -1,28 +1,31 @@
-$info-card-image-ratio: 1;
-
 .programs {
-  .layout-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    grid-gap: $gap-padding;
+	.layout-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		width: 100%;
+		grid-gap: $gap-padding;
+	}
+}
 
-    .info-card {
-      .image-wrapper {
-        height: 0;
-        padding-top: calc(100% * #{$info-card-image-ratio});
-        position: relative;
-        margin-bottom: 1.5rem;
+@include md {
+	.programs {
+		.layout-wrapper {
+			margin: calc(3 * #{$gap-padding}) 0;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-gap: calc(5 * #{$gap-padding});
+		}
+	}
+}
 
-        .info-card-image {
-          @include full-span;
-          position: absolute;
-          top: 0;
-          left: 0;
-          object-position: center;
-          object-fit: cover;
-        }
-      }
-    }
-  }
+@include sm {
+	.programs {
+		.layout-wrapper {
+			margin: $gap-padding 0;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-gap: $gap-padding;
+		}
+	}
 }

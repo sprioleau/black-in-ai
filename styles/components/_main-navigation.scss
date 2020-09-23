@@ -1,76 +1,81 @@
 header {
-  position: fixed;
-  top: 0;
-  margin: 0 auto;
-  width: 100%;
-  background-color: $white;
-  z-index: 2;
+	position: fixed;
+	top: 0;
+	margin: 0 auto;
+	width: 100%;
+	background-color: $white;
+	z-index: 2;
 
-  .section {
-    padding: 0 $section-padding;
+	.section {
+		padding: 0 $section-padding;
 
-    .container {
-      height: $header-height;
-    }
-  }
-
+		.container {
+			height: $header-height;
+		}
+	}
 }
 
 .main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: $container-width;
-  height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: $container-width;
+	height: 100%;
 
-  .logo {
-    display: flex;
-    align-items: center;
+	.logo {
+		display: flex;
+		align-items: center;
 
-    &__wrapper {
-      width: 2.5rem;
+		&__wrapper {
+			width: 2.5rem;
 
-      svg {
-        @include full-span;
-      }
-    }
+			svg {
+				@include full-span;
+			}
+		}
 
-    &__text-wrapper {
-      margin-left: 1rem;
+		&__text-wrapper {
+			margin-left: 1rem;
 
-      .logo-wordmark {
-        text-transform: uppercase;
-        @include ff;
-        margin: 0;
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
-    }
-  }
+			.logo-wordmark {
+				text-transform: uppercase;
+				@include ff;
+				margin: 0;
+				font-size: 1.25rem;
+				font-weight: 600;
+			}
+		}
+	}
 
-  .nav-links {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
+	.nav-links {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 0.9rem;
 
-    .nav-link {
-      @include ff-medium;
-      margin-right: 1rem;
-      text-decoration: none;
-      color: inherit;
+		.nav-link {
+			@include ff-medium;
+			margin-right: 1rem;
+			text-decoration: none;
+			color: inherit;
 
-      &.btn.donate {
-        display: inline-block;
-        color: white;
-      }
+			&.btn.donate {
+				display: inline-block;
+				color: white;
+			}
 
-      &:last-of-type {
-        margin-right: 0;
-      }
+			&:last-of-type {
+				margin-right: 0;
+			}
 
-      &.active {
-        color: $blue;
-      }
-    }
-  }
+			&.active {
+				color: $blue;
+			}
+		}
+	}
+}
+
+@include lg {
+	.main-nav {
+		display: none;
+	}
 }
