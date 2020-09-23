@@ -178,6 +178,10 @@ header {
 					border-top: $gray-border;
 				}
 
+				&.active a {
+					color: $blue;
+				}
+
 				a {
 					@include full-span;
 					display: flex;
