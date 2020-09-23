@@ -139,10 +139,6 @@ header {
 		visibility: hidden;
 	}
 
-	// * {
-	// 	outline: 1px solid red;
-	// }
-
 	.mobile-nav {
 		display: flex;
 		align-items: center;
@@ -230,7 +226,6 @@ header {
 
 @include sm {
 	header {
-		position: fixed;
 		top: 0;
 		margin: 0 auto;
 		width: 100%;
