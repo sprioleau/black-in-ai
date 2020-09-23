@@ -81,13 +81,19 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: unset;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Lora", Avenir, Helvecitca Neue, sans-serif;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 3rem;
   margin-bottom: 3rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -392,6 +398,9 @@ header .container {
 }
 
 .conferences-workshops .conferences-workshops__events .event .event__title {
+  font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
   color: #fff;
   margin: 0;
 }
@@ -411,5 +420,33 @@ header .container {
 
 .conferences-workshops .conferences-workshops__events .view-more:hover p {
   color: #fff;
+}
+
+.programs .layout-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  grid-gap: 2rem;
+}
+
+.programs .layout-wrapper .info-card .image-wrapper {
+  height: 0;
+  padding-top: calc(100% * 1);
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.programs .layout-wrapper .info-card .image-wrapper .info-card-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=styles.css.map */

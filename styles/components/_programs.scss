@@ -1,0 +1,28 @@
+$info-card-image-ratio: 1;
+
+.programs {
+  .layout-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    grid-gap: $gap-padding;
+
+    .info-card {
+      .image-wrapper {
+        height: 0;
+        padding-top: calc(100% * #{$info-card-image-ratio});
+        position: relative;
+        margin-bottom: 1.5rem;
+
+        .info-card-image {
+          @include full-span;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-position: center;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
