@@ -125,7 +125,6 @@ $footer-bottom-margin: 1.5rem;
 @include lg {
 	.footer {
 		.footer-grid {
-			margin: calc(2 * #{$gap-padding}) 0;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: auto;
 			grid-template-areas:

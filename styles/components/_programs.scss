@@ -14,7 +14,7 @@
 			margin: calc(3 * #{$gap-padding}) 0;
 			grid-template-columns: 1fr;
 			grid-template-rows: auto;
-			grid-gap: calc(5 * #{$gap-padding});
+			grid-gap: calc(1.5 * #{$gap-padding});
 		}
 	}
 }
