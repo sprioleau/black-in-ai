@@ -540,6 +540,10 @@ header li {
   .mobile-nav .nav-links .nav-link.active a {
     color: #007299;
   }
+  .mobile-nav .nav-links .nav-link:active {
+    background-color: #007299;
+    color: white;
+  }
   .mobile-nav .nav-links .nav-link a {
     width: 100%;
     height: 100%;

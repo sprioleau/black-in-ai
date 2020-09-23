@@ -182,6 +182,11 @@ header {
 					color: $blue;
 				}
 
+				&:active {
+					background-color: $blue;
+					color: white;
+				}
+
 				a {
 					@include full-span;
 					display: flex;
