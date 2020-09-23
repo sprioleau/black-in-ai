@@ -229,6 +229,7 @@ body {
 
 main {
   margin-top: 100px;
+  z-index: 0;
 }
 
 a {
@@ -348,6 +349,25 @@ header li {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.nav-divider {
+  position: fixed;
+  top: calc(100px - 2px);
+  margin-top: auto;
+  background-color: #fff;
+  width: 100%;
+  height: calc(2 * 2px);
+  z-index: 1;
+}
+
+.nav-divider .divider {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #007299;
+  width: 100%;
+  height: 2px;
 }
 
 .main-nav {

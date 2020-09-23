@@ -1,4 +1,5 @@
 $gray-border: 1px solid rgba($gray, 0.5);
+$nav-divider-height: 2px;
 
 header {
 	position: fixed;
@@ -21,6 +22,24 @@ header {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+}
+
+.nav-divider {
+	position: fixed;
+	top: calc(#{$header-height} - #{$nav-divider-height});
+	margin-top: auto;
+	background-color: $white;
+	width: 100%;
+	height: calc(2 * #{$nav-divider-height});
+	z-index: 1;
+
+	.divider {
+		position: sticky;
+		top: 0;
+		background-color: $blue;
+		width: 100%;
+		height: $nav-divider-height;
 	}
 }
 
