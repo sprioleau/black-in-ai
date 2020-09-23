@@ -8,7 +8,7 @@
   }
 
   .conferences-workshops__description {
-    padding-right: $gap-padding;
+    padding-right: calc(2 * #{$gap-padding});
   }
 
   .conferences-workshops__events {
@@ -19,7 +19,7 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      padding: 1.5rem 0;
+      padding: 1.25rem 0;
       border-top: 1px solid rgba($white, 0.25);
       
       &:first-of-type {
@@ -28,7 +28,7 @@
 
       .event__title {
         @include ff-medium;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: $white;
         margin: 0;
       }

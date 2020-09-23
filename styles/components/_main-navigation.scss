@@ -4,18 +4,22 @@ header {
   margin: 0 auto;
   width: 100%;
   background-color: $white;
+  z-index: 2;
 
-  .container {
-    height: $header-height;
+  .section {
+    padding: 0 $section-padding;
+
+    .container {
+      height: $header-height;
+    }
   }
+
 }
 
 .main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 2;
-  margin: 0 auto;
   max-width: $container-width;
   height: 100%;
 

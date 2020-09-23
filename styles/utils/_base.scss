@@ -1,15 +1,22 @@
 // Variables
-$container-width: 1400px; 
+$section-padding: 80px;
+$container-width: 1400px;
 $header-height: 100px;
-$gap-padding: 2rem;
+$gap-padding: 1.5rem;
 
 body {
   background: $white;
   font-family: $ff;
 }
 
+::selection {
+  color: $white;
+  background-color: $orange;
+  opacity: 1;
+}
+
 .section {
-  padding: 80px;
+  padding: $section-padding;
 
   &.bg-blue {
     background-color: $blue;
@@ -34,11 +41,6 @@ body {
     p, a {
       opacity: 0.8;
     }
-
-    // p {  
-    //   -webkit-font-smoothing: antialiased;
-    //   -moz-osx-font-smoothing: grayscale;
-    // }
   }
 
 }
@@ -46,6 +48,7 @@ body {
 .container {
   max-width: $container-width;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 main {

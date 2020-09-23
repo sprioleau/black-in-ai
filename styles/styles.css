@@ -83,24 +83,33 @@ h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p, ul, li, a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 h1, h2, h3 {
   font-family: "Lora", Avenir, Helvecitca Neue, sans-serif;
   font-weight: 700;
 }
 
+h1 {
+  font-size: 3.5rem;
+}
+
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 3rem;
 }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 p {
   line-height: 1.8;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #666;
   font-weight: 300;
   max-width: 60ch;
@@ -108,9 +117,37 @@ p {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 850px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
 body {
   background: #fff;
   font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #f18f01;
+  opacity: 1;
+}
+
+::selection {
+  color: #fff;
+  background-color: #f18f01;
+  opacity: 1;
 }
 
 .section {
@@ -145,6 +182,7 @@ body {
 .container {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 main {
@@ -200,7 +238,7 @@ a {
 .btn.donate {
   color: #fff;
   background-color: #f18f01;
-  font-size: 1.1rem;
+  font-size: 0.9;
 }
 
 .btn.donate:hover {
@@ -234,9 +272,14 @@ header {
   margin: 0 auto;
   width: 100%;
   background-color: #fff;
+  z-index: 2;
 }
 
-header .container {
+header .section {
+  padding: 0 80px;
+}
+
+header .section .container {
   height: 100px;
 }
 
@@ -250,8 +293,6 @@ header .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 2;
-  margin: 0 auto;
   max-width: 1400px;
   height: 100%;
 }
@@ -324,9 +365,7 @@ header .container {
 }
 
 .hero .layout-wrapper .hero-text {
-  font-size: 2rem;
-  font-size: clamp(1rem, 2vw, 2rem);
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
@@ -386,7 +425,7 @@ header .container {
 }
 
 .conferences-workshops .conferences-workshops__description {
-  padding-right: 2rem;
+  padding-right: calc(2 * 1.5rem);
 }
 
 .conferences-workshops .conferences-workshops__events {
@@ -404,7 +443,7 @@ header .container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
@@ -415,7 +454,7 @@ header .container {
 .conferences-workshops .conferences-workshops__events .event .event__title {
   font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
   margin: 0;
 }
@@ -443,7 +482,7 @@ header .container {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
 }
 
 .programs .layout-wrapper .info-card .image-wrapper {
@@ -468,39 +507,43 @@ header .container {
 .footer .footer-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 2fr 1fr 2fr;
-      grid-template-columns: 2fr 2fr 1fr 2fr;
+  -ms-grid-columns: 3fr 3fr 1fr 3fr;
+      grid-template-columns: 3fr 3fr 1fr 3fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  grid-gap: calc(2 * 2rem);
+  grid-gap: 1.5rem;
+}
+
+.footer .footer-grid .footer-column {
+  width: 100%;
 }
 
 .footer .footer-grid .footer-column__heading {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer .footer-grid .footer-column__heading.logo-wordmark {
   font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer .footer-grid .footer-column p, .footer .footer-grid .footer-column a, .footer .footer-grid .footer-column li {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .footer .footer-grid .footer-column ul, .footer .footer-grid .footer-column li {
   list-style: none;
-  margin: 0 0 2rem;
+  margin: 0 0 1.5rem;
   padding: 0;
 }
 
 .footer .footer-grid .footer-column .email {
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer .footer-grid .footer-column .social-wrapper {
@@ -549,13 +592,12 @@ header .container {
   position: relative;
   background-color: #fff;
   border-radius: 3rem;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   padding-right: 160px;
   width: 100%;
 }
 
 .footer .footer-grid .footer-column .form .input-wrapper .form__input {
-  font-size: 1.2rem;
   line-height: 1.4;
   padding: 0;
   border: none;
@@ -568,14 +610,14 @@ header .container {
 
 .footer .footer-grid .footer-column .form .input-wrapper .form__button {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  height: 50px;
+  top: 4px;
+  right: 4px;
+  height: 40px;
 }
 
-.footer .footer-grid .copyright {
+.footer .footer-grid .utility-footer .copyright {
   color: #fff;
   opacity: 0.8;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 /*# sourceMappingURL=styles.css.map */
