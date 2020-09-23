@@ -1,26 +1,33 @@
 // Import Google Font
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Overpass:wght@300;600&display=swap");
+@font-face {
+	font-family: "Overpass";
+	src: url("../../fonts/Overpass-Regular.ttf");
+}
 
-// Font Weights
-// Overpass: 300, 600
-// Lora: 600, 700
+@font-face {
+	font-family: "OverpassBold";
+	src: url("../../fonts/Overpass-Bold.ttf");
+}
+
+@font-face {
+	font-family: "LoraBold";
+	src: url("../../fonts/Lora-Bold.ttf");
+}
 
 $ff: "Overpass", Avenir, Helvecitca Neue, sans-serif;
-$ff-headings: "Lora", Avenir, Helvecitca Neue, sans-serif;
+$ff-medium: "OverpassBold", Avenir, Helvecitca Neue, sans-serif;
+$ff-headings: "LoraBold", Avenir, Helvecitca Neue, sans-serif;
 
 @mixin ff {
 	font-family: $ff;
-	font-weight: 300;
 }
 
 @mixin ff-medium {
-	font-family: $ff;
-	font-weight: 600;
+	font-family: $ff-medium;
 }
 
 @mixin ff-headings {
 	font-family: $ff-headings;
-	font-weight: 700;
 }
 
 h1,
@@ -47,7 +54,7 @@ a {
 h1,
 h2,
 h3 {
-	@include ff-headings;
+	font-family: $ff-headings;
 }
 
 h1 {

@@ -5,7 +5,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Overpass:wght@300;600&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -75,6 +74,21 @@ button,
   -webkit-appearance: button;
 }
 
+@font-face {
+  font-family: "Overpass";
+  src: url("../../fonts/Overpass-Regular.ttf");
+}
+
+@font-face {
+  font-family: "OverpassBold";
+  src: url("../../fonts/Overpass-Bold.ttf");
+}
+
+@font-face {
+  font-family: "LoraBold";
+  src: url("../../fonts/Lora-Bold.ttf");
+}
+
 h1,
 h2,
 h3,
@@ -99,8 +113,7 @@ a {
 h1,
 h2,
 h3 {
-  font-family: "Lora", Avenir, Helvecitca Neue, sans-serif;
-  font-weight: 700;
+  font-family: "LoraBold", Avenir, Helvecitca Neue, sans-serif;
 }
 
 h1 {
@@ -247,8 +260,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
-  font-weight: 600;
+  font-family: "OverpassBold", Avenir, Helvecitca Neue, sans-serif;
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-size: 0.9rem;
@@ -366,7 +378,6 @@ header .section .container {
 .main-nav .logo__text-wrapper .logo-wordmark {
   text-transform: uppercase;
   font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
-  font-weight: 300;
   margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
@@ -379,8 +390,7 @@ header .section .container {
 }
 
 .main-nav .nav-links .nav-link {
-  font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
-  font-weight: 600;
+  font-family: "OverpassBold", Avenir, Helvecitca Neue, sans-serif;
   margin-right: 1rem;
   text-decoration: none;
   color: inherit;
@@ -538,8 +548,7 @@ header .section .container {
 }
 
 .conferences-workshops__events .event .event__title {
-  font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
-  font-weight: 600;
+  font-family: "OverpassBold", Avenir, Helvecitca Neue, sans-serif;
   font-size: 1.2rem;
   color: #fff;
   margin: 0;
@@ -698,8 +707,7 @@ header .section .container {
 }
 
 .footer .footer-grid .footer-column__heading.logo-wordmark {
-  font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
-  font-weight: 600;
+  font-family: "OverpassBold", Avenir, Helvecitca Neue, sans-serif;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }

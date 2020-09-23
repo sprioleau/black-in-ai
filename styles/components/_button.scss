@@ -1,6 +1,6 @@
 .btn {
 	@include center;
-	@include ff-medium;
+	font-family: $ff-medium;
 	@include transition;
 	font-size: 0.9rem;
 	border-radius: 3rem;

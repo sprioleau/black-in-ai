@@ -39,7 +39,7 @@ header {
 
 			.logo-wordmark {
 				text-transform: uppercase;
-				@include ff;
+				font-family: $ff;
 				margin: 0;
 				font-size: 1.25rem;
 				font-weight: 600;
@@ -53,7 +53,7 @@ header {
 		font-size: 0.9rem;
 
 		.nav-link {
-			@include ff-medium;
+			font-family: $ff-medium;
 			margin-right: 1rem;
 			text-decoration: none;
 			color: inherit;
