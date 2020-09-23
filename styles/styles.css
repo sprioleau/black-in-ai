@@ -377,36 +377,73 @@ header .section .container {
 
 .main-nav .logo__text-wrapper .logo-wordmark {
   text-transform: uppercase;
-  font-family: "Overpass", Avenir, Helvecitca Neue, sans-serif;
+  font-family: "OverpassBold", Avenir, Helvecitca Neue, sans-serif;
   margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
 }
 
+.main-nav ul,
+.main-nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .main-nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.9rem;
 }
 
 .main-nav .nav-links .nav-link {
-  font-family: "OverpassBold", Avenir, Helvecitca Neue, sans-serif;
-  margin-right: 1rem;
-  text-decoration: none;
-  color: inherit;
+  margin-right: 1.5rem;
+  position: relative;
 }
 
-.main-nav .nav-links .nav-link.btn.donate {
-  display: inline-block;
-  color: white;
+.main-nav .nav-links .nav-link::before {
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 4px;
+  width: 100%;
+  background-color: currentColor;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  opacity: 0;
 }
 
-.main-nav .nav-links .nav-link:last-of-type {
-  margin-right: 0;
+.main-nav .nav-links .nav-link:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  opacity: 1;
 }
 
 .main-nav .nav-links .nav-link.active {
   color: #007299;
+}
+
+.main-nav .nav-links .nav-link a {
+  font-family: "OverpassBold", Avenir, Helvecitca Neue, sans-serif;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-nav .nav-links .nav-link a.btn.donate {
+  display: inline-block;
+  color: white;
 }
 
 @media (max-width: 1180px) {
@@ -799,6 +836,13 @@ header .section .container {
   right: 4px;
   height: 40px;
   padding: 1rem 1.25rem;
+}
+
+.footer .footer-grid .footer-column .form .input-wrapper .form__button:hover {
+  background-color: #007299;
+  color: #fff;
+  -webkit-transform: none;
+          transform: none;
 }
 
 .footer .footer-grid .utility-footer .copyright {

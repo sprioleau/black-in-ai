@@ -4,52 +4,94 @@ $bp-small: 576px;
 $bp-medium: 850px;
 $bp-large: 1180px;
 
-
 @mixin xsm {
-  @media (max-width: #{$bp-x-small}) {
-    @content;
-  }
+	@media (max-width: #{$bp-x-small}) {
+		@content;
+	}
 }
 
 @mixin sm {
-  @media (max-width: #{$bp-small}) {
-    @content;
-  }
+	@media (max-width: #{$bp-small}) {
+		@content;
+	}
 }
 
 @mixin md {
-  @media (max-width: #{$bp-medium}) {
-    @content;
-  }
+	@media (max-width: #{$bp-medium}) {
+		@content;
+	}
 }
 
 @mixin lg {
-  @media (max-width: #{$bp-large}) {
-    @content;
-  }
+	@media (max-width: #{$bp-large}) {
+		@content;
+	}
 }
 
 @mixin center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @mixin grid-center {
-  display: grid;
-  place-items: center;
+	display: grid;
+	place-items: center;
 }
 
 @mixin square-span($size) {
-  width: $size;
-  height: $size;
+	width: $size;
+	height: $size;
 }
 
 @mixin full-span {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 @mixin transition {
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@mixin hover1 {
+	&::before {
+		@include full-span;
+		@include transition;
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: $white;
+		box-shadow: 0 0 15px -3px rgba($black, 0.25);
+		opacity: 0;
+		padding: 0.75rem 1rem;
+		border-radius: 3rem;
+		z-index: -1;
+	}
+
+	&:hover::before {
+		opacity: 1;
+	}
+}
+
+@mixin hover2 {
+	&::before {
+		@include transition;
+		content: "";
+		position: absolute;
+		bottom: -0.75rem;
+		left: 0;
+		transform: translate(-50%, -50%);
+		height: 4px;
+		width: 100%;
+		background-color: currentColor;
+		transform: scaleY(0);
+		opacity: 0;
+	}
+
+	&:hover::before {
+		transform: scaleY(1);
+		opacity: 1;
+	}
 }

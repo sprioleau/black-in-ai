@@ -101,6 +101,12 @@ $footer-bottom-margin: 1.5rem;
 						right: 4px;
 						height: 40px;
 						padding: 1rem 1.25rem;
+
+						&:hover {
+							background-color: $blue;
+							color: $white;
+							transform: none;
+						}
 					}
 				}
 			}
