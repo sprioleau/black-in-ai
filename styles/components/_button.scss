@@ -1,7 +1,7 @@
 .btn {
 	@include center;
-	font-family: $ff-medium;
 	@include transition;
+	font-family: $ff-medium;
 	font-size: 0.9rem;
 	border-radius: 3rem;
 	color: $black;
@@ -30,10 +30,10 @@
 	&.donate {
 		color: $white;
 		background-color: $orange;
-		font-size: 0.9;
+		font-size: 0.9rem;
 
 		&:hover {
-			background-color: darken($orange, 10%);
+			background-color: lighten($orange, 10%);
 		}
 	}
 
